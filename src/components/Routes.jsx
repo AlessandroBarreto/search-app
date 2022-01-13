@@ -1,10 +1,17 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Routes as Switch, Route, Navigate } from "react-router-dom";
 
 export const Routes = () => {
   return (
     <div className="p-4">
-      <h1>Routes</h1>
+      <Switch>
+        <Route path="/" />
+        <Route
+          path={["/search,", "/images", "/news", "/videos"]}
+          element={<Results />}
+        />
+        <Route path="*" element={<Navigate to="/search" />} />
+      </Switch>
     </div>
   );
 };

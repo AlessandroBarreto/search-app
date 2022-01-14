@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import "./index.css";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
+import { ResultContextProvider } from "./contexts/ResultContextProvider";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ResultContextProvider>
+      <Router>
+        <App />
+      </Router>
+    </ResultContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

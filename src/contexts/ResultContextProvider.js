@@ -9,10 +9,10 @@ export const ResultContextProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   // /videos, /search, /images
-  const getResults = async (type) => {
+  const getResults = async (url) => {
     setIsLoading(true);
 
-    const response = await fetch(`${baseUrl}${type}`, {
+    const response = await fetch(`${baseUrl}${url}`, {
       method: "GET",
       headers: {
         "x-user-agent": "desktop",
@@ -22,6 +22,8 @@ export const ResultContextProvider = ({ children }) => {
       },
     });
     const data = await response.json();
+
+    console.log(data);
 
     setResults(data);
     setIsLoading(false);

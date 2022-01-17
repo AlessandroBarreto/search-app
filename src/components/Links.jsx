@@ -12,8 +12,8 @@ export const Links = () => {
   const { pathname } = useLocation();
 
   const selectedUrl = (url) => {
-    if (pathname === url)
-      return "text-blue-700 border-b-2 dark:text-blue-300 border-blue-700 pb-2 ";
+    if(pathname === url) return"text-blue-700 border-b-2 dark:text-blue-300 border-blue-700 pb-2 ";
+      
   };
 
   return (

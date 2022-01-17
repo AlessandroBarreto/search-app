@@ -8,7 +8,7 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
       <div className="flex justify-between items-center space-x-5 w-screen">
         <Link to="/">
           <p className="text-2xl bg-blue-500 text-white py-1 px-2 rounded  font-medium  dark:text-gray-900 dark:bg-gray-50 ">
-            Goggl 🔎
+            notGoogle 🔎
           </p>
         </Link>
         <button

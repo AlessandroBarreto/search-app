@@ -70,12 +70,12 @@ export const Results = () => {
                 <p className="text-lg  dark:text-blue-300 text-blue-700">
                   {title}
                 </p>
-                <div className="flex gap-4">
-                  <a href={source?.href} target="_blank" rel="noreffer">
-                    {source?.href}
-                  </a>
-                </div>
               </a>
+              <div className="flex gap-4">
+                <a href={source?.href} target="_blank" rel="noreffer">
+                  {source?.href}
+                </a>
+              </div>
             </div>
           ))}
         </div>

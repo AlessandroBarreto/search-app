@@ -13,7 +13,7 @@ export const Results = () => {
     getResults("/search/q=elon+musk");
   }, []);
 
-  //if (isLoading) return <Loading />;
+  if (isLoading) return <Loading />;
 
   switch (location.pathname) {
     case "/search":

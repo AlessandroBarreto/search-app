@@ -82,7 +82,7 @@ export const Results = () => {
       );
     case "/videos":
       return (
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-center">
           {results.map((video, index) => (
             <div key={index} className="p-2">
               {video?.additional_links?.[0]?.href && (

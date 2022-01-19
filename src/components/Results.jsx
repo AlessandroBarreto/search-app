@@ -17,6 +17,7 @@ export const Results = () => {
         getResults(`${location.pathname}/q=${searchTerm}&num=40`);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, location.pathname]);
 
   if (isLoading) return <Loading />;
@@ -72,7 +73,7 @@ export const Results = () => {
                 </p>
               </a>
               <div className="flex gap-4">
-                <a href={source?.href} target="_blank" rel="noreffer">
+                <a href={source?.href} target="_blank" rel="noreferrer">
                   {source?.href}
                 </a>
               </div>
